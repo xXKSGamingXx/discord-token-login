@@ -9,11 +9,13 @@
 // @grant        none
 // ==/UserScript==
 
+
 //Discord: https://discord.gg/9TNezpZEmc
 //youtube: https://www.youtube.com/@xx_ksgaming_xx
 //github:  https://github.com/xXKSGamingXx
 //paypal:  https://www.paypal.com/paypalme/ksfap
 //Tipply:  https://tipply.pl/@xx_ksgaming_xx
+
 
 (function() {
     'use strict';
