@@ -1,4 +1,4 @@
-Oczywiście! Oto przykładowe README dla Twojego skryptu:
+
 
 ---
 
