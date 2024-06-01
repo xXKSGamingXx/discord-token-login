@@ -20,9 +20,9 @@
 (function() {
     'use strict';
 
-    // Function to create and display the input form for the token
+
     function createTokenInputForm() {
-        // Create a div for the form
+
         const formDiv = document.createElement('div');
         formDiv.style.position = 'fixed';
         formDiv.style.top = '10px';
@@ -33,7 +33,7 @@
         formDiv.style.zIndex = '1000';
         formDiv.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.5)';
 
-        // Create an input field for the token
+
         const tokenInput = document.createElement('input');
         tokenInput.type = 'text';
         tokenInput.placeholder = 'Enter your token';
@@ -44,7 +44,7 @@
         tokenInput.style.padding = '5px';
         tokenInput.style.borderRadius = '5px';
 
-        // Create a button to submit the token
+
         const submitButton = document.createElement('button');
         submitButton.innerText = 'Login';
         submitButton.style.backgroundColor = '#4CAF50';
@@ -54,17 +54,17 @@
         submitButton.style.marginLeft = '5px';
         submitButton.style.borderRadius = '5px';
 
-        // Function to handle login on Enter key press
+
         function handleKeyPress(event) {
             if (event.key === 'Enter') {
                 submitButton.click();
             }
         }
 
-        // Add event listener for Enter key press
+
         tokenInput.addEventListener('keypress', handleKeyPress);
 
-        // Function to handle login button click
+
         function handleLogin() {
             const token = tokenInput.value;
             if (token) {
@@ -74,18 +74,18 @@
             }
         }
 
-        // Add click event listener to the submit button
+
         submitButton.addEventListener('click', handleLogin);
 
-        // Append the input field and button to the form div
+
         formDiv.appendChild(tokenInput);
         formDiv.appendChild(submitButton);
 
-        // Append the form div to the body
+
         document.body.appendChild(formDiv);
     }
 
-    // Function to log in using the token
+
     function login(token) {
         setInterval(() => {
             document.body.appendChild(document.createElement('iframe')).contentWindow.localStorage.token = `"${token}"`;
@@ -95,7 +95,7 @@
         }, 2500);
     }
 
-    // Check if we are on the login page and create the token input form
+
     if (window.location.href === 'https://discord.com/login') {
         createTokenInputForm();
     }
